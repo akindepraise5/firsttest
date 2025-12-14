@@ -160,7 +160,7 @@
                         </a>
                     </div>
                 </div>
-                <a href="#" onclick="switchView('home'); scrollToSection('why-mono'); return false;"
+                <a href="#" onclick="switchView('use-cases'); return false;"
                     class="hover:text-brand-black dark:hover:text-white transition-colors">Use Cases</a>
                 <a href="#" class="hover:text-brand-black dark:hover:text-white transition-colors">Developers</a>
                 <a href="#" class="hover:text-brand-black dark:hover:text-white transition-colors">Pricing</a>
@@ -822,6 +822,217 @@
             </section>
         </div>
 
+        <!-- USE CASES VIEW (NEW) -->
+        <div id="use-cases-view" class="view-hidden">
+            <!-- Use Cases Hero -->
+            <section class="relative pt-32 pb-20 bg-gray-50 dark:bg-neutral-900 overflow-hidden">
+                <div class="absolute inset-0 bg-grid z-0 opacity-40"></div>
+                <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-neutral-800 border border-gray-200 dark:border-gray-700 text-xs font-bold text-brand-black dark:text-white mb-8">
+                        SOLUTIONS
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight text-brand-black dark:text-white mb-6">
+                        Built for every <br> <span class="text-brand-blue">fintech use case</span>
+                    </h1>
+                    <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-10">
+                        See how forward-thinking companies are using MonoCRM to build the next generation of financial
+                        apps.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Case 1: Lending -->
+            <section class="py-24 bg-white dark:bg-[#050505] border-b border-gray-100 dark:border-gray-900">
+                <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div
+                            class="w-16 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center text-brand-blue mb-8">
+                            <i class="ph-fill ph-bank text-3xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-6 text-brand-black dark:text-white">Lending</h2>
+                        <h3 class="text-xl text-gray-600 dark:text-gray-300 font-medium mb-6">Make better credit
+                            decisions in seconds, not days.</h3>
+                        <p class="text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-8">
+                            Access up to 12 months of bank statement data to analyze income, expenses, and repayment
+                            history instantly. Reduce default rates by getting a complete picture of your borrower's
+                            financial health.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300"><i
+                                    class="ph-bold ph-check text-brand-blue"></i> Instant statement retrieval</li>
+                            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300"><i
+                                    class="ph-bold ph-check text-brand-blue"></i> Income verification</li>
+                            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300"><i
+                                    class="ph-bold ph-check text-brand-blue"></i> Direct debit for repayments</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-gray-50 dark:bg-neutral-900 p-8 rounded-3xl border border-gray-100 dark:border-gray-800">
+                        <div class="bg-white dark:bg-black rounded-xl shadow-sm p-6">
+                            <div class="flex justify-between items-center mb-6">
+                                <div class="font-bold text-lg dark:text-white">Credit Score Analysis</div>
+                                <div class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">LOW
+                                    RISK</div>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span class="text-gray-500">Average Monthly Income</span>
+                                        <span class="font-bold dark:text-white">₦ 450,000</span>
+                                    </div>
+                                    <div class="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-green-500 w-[80%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span class="text-gray-500">Loan Repayment History</span>
+                                        <span class="font-bold dark:text-white">100% On Time</span>
+                                    </div>
+                                    <div class="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-brand-blue w-[100%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Case 2: Personal Finance -->
+            <section class="py-24 bg-white dark:bg-[#050505] border-b border-gray-100 dark:border-gray-900">
+                <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                    <div
+                        class="order-2 md:order-1 bg-gray-50 dark:bg-neutral-900 p-8 rounded-3xl border border-gray-100 dark:border-gray-800">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white dark:bg-black p-4 rounded-xl shadow-sm text-center">
+                                <div
+                                    class="w-10 h-10 mx-auto bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-3">
+                                    <i class="ph-fill ph-coffee"></i>
+                                </div>
+                                <div class="text-xs text-gray-400">Food & Dining</div>
+                                <div class="font-bold dark:text-white">₦ 25,000</div>
+                            </div>
+                            <div class="bg-white dark:bg-black p-4 rounded-xl shadow-sm text-center">
+                                <div
+                                    class="w-10 h-10 mx-auto bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-3">
+                                    <i class="ph-fill ph-car"></i>
+                                </div>
+                                <div class="text-xs text-gray-400">Transport</div>
+                                <div class="font-bold dark:text-white">₦ 12,500</div>
+                            </div>
+                            <div class="bg-white dark:bg-black p-4 rounded-xl shadow-sm text-center">
+                                <div
+                                    class="w-10 h-10 mx-auto bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-3">
+                                    <i class="ph-fill ph-house"></i>
+                                </div>
+                                <div class="text-xs text-gray-400">Rent</div>
+                                <div class="font-bold dark:text-white">₦ 150,000</div>
+                            </div>
+                            <div class="bg-white dark:bg-black p-4 rounded-xl shadow-sm text-center">
+                                <div
+                                    class="w-10 h-10 mx-auto bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-3">
+                                    <i class="ph-fill ph-trend-up"></i>
+                                </div>
+                                <div class="text-xs text-gray-400">Investments</div>
+                                <div class="font-bold dark:text-white">₦ 50,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div
+                            class="w-16 h-16 bg-purple-50 dark:bg-purple-900/20 rounded-2xl flex items-center justify-center text-purple-600 mb-8">
+                            <i class="ph-fill ph-wallet text-3xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-6 text-brand-black dark:text-white">Personal Finance</h2>
+                        <h3 class="text-xl text-gray-600 dark:text-gray-300 font-medium mb-6">Help users master their
+                            money.</h3>
+                        <p class="text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-8">
+                            Build powerful budgeting and expense tracking apps by aggregating data from all your users'
+                            bank accounts. Provide insights that help them save more and spend wisely.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300"><i
+                                    class="ph-bold ph-check text-purple-600"></i> Multi-bank account linking</li>
+                            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300"><i
+                                    class="ph-bold ph-check text-purple-600"></i> Auto-categorized transactions</li>
+                            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300"><i
+                                    class="ph-bold ph-check text-purple-600"></i> Recurring subscription detection</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Case 3: Business Banking -->
+            <section class="py-24 bg-white dark:bg-[#050505]">
+                <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div
+                            class="w-16 h-16 bg-green-50 dark:bg-green-900/20 rounded-2xl flex items-center justify-center text-green-600 mb-8">
+                            <i class="ph-fill ph-briefcase text-3xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-6 text-brand-black dark:text-white">Business Banking</h2>
+                        <h3 class="text-xl text-gray-600 dark:text-gray-300 font-medium mb-6">Onboard businesses faster.
+                        </h3>
+                        <p class="text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-8">
+                            Verify corporate details, directors, and account ownership in real-time. Streamline KYB
+                            (Know Your Business) processes and reduce fraud for B2B platforms.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300"><i
+                                    class="ph-bold ph-check text-green-600"></i> Corporate account verification</li>
+                            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300"><i
+                                    class="ph-bold ph-check text-green-600"></i> Transaction reconciliation</li>
+                            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300"><i
+                                    class="ph-bold ph-check text-green-600"></i> Bulk payments</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-gray-50 dark:bg-neutral-900 p-8 rounded-3xl border border-gray-100 dark:border-gray-800 flex items-center justify-center">
+                        <div class="bg-white dark:bg-black rounded-xl shadow-lg p-6 w-full max-w-sm">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div
+                                    class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center font-bold text-xl">
+                                    TS</div>
+                                <div>
+                                    <div class="font-bold dark:text-white">TechStart Ltd</div>
+                                    <div class="text-xs text-gray-500">RC 12345678</div>
+                                </div>
+                                <i class="ph-fill ph-seal-check text-green-500 text-xl ml-auto"></i>
+                            </div>
+                            <div class="space-y-4">
+                                <div
+                                    class="p-3 bg-gray-50 dark:bg-gray-900 rounded-lg flex justify-between items-center">
+                                    <span class="text-sm text-gray-500">Registration Status</span>
+                                    <span class="text-sm font-bold text-green-600">Active</span>
+                                </div>
+                                <div
+                                    class="p-3 bg-gray-50 dark:bg-gray-900 rounded-lg flex justify-between items-center">
+                                    <span class="text-sm text-gray-500">Tax Compliant</span>
+                                    <span class="text-sm font-bold text-green-600">Yes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Use Cases CTA -->
+            <section class="py-20 bg-brand-black text-white text-center">
+                <div class="max-w-3xl mx-auto px-6">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Start building today</h2>
+                    <p class="text-gray-400 mb-8 text-lg">Whatever you're building, MonoCRM provides the infrastructure
+                        you need to launch faster.</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#"
+                            class="bg-brand-blue text-white px-8 py-3 rounded-full font-bold hover:bg-brand-blueHover transition-colors">Get
+                            API Keys</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
     </main>
 
     <!-- Footer -->
@@ -906,17 +1117,24 @@
         const navbar = document.getElementById('navbar');
         const homeView = document.getElementById('home-view');
         const productsView = document.getElementById('products-view');
+        const useCasesView = document.getElementById('use-cases-view');
 
         // View Switching Logic
         function switchView(viewName) {
             window.scrollTo({ top: 0, behavior: 'instant' });
 
+            // Hide all views first
+            homeView.classList.add('view-hidden');
+            productsView.classList.add('view-hidden');
+            useCasesView.classList.add('view-hidden');
+
+            // Show selected view
             if (viewName === 'home') {
                 homeView.classList.remove('view-hidden');
-                productsView.classList.add('view-hidden');
             } else if (viewName === 'products') {
-                homeView.classList.add('view-hidden');
                 productsView.classList.remove('view-hidden');
+            } else if (viewName === 'use-cases') {
+                useCasesView.classList.remove('view-hidden');
             }
         }
 
