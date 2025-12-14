@@ -122,9 +122,9 @@
     class="bg-white dark:bg-[#050505] text-brand-black dark:text-gray-100 selection:bg-brand-blue selection:text-white transition-colors duration-300">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/90 dark:bg-[#050505]/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all duration-300"
+    <nav class="fixed w-full z-50 bg-white/95 dark:bg-[#050505]/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all duration-300"
         id="navbar">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-50">
             <!-- Logo -->
             <a href="#" onclick="switchView('home'); return false;" class="flex items-center gap-2 group">
                 <div class="w-8 h-8 bg-brand-black rounded-lg flex items-center justify-center text-white">
@@ -138,7 +138,9 @@
             <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600 dark:text-gray-400">
                 <div class="relative group cursor-pointer h-20 flex items-center">
                     <button onclick="switchView('products')"
-                        class="group-hover:text-brand-black dark:group-hover:text-white transition-colors focus:outline-none">Products</button>
+                        class="group-hover:text-brand-black dark:group-hover:text-white transition-colors focus:outline-none flex items-center gap-1">
+                        Products <i class="ph-bold ph-caret-down text-xs mt-0.5"></i>
+                    </button>
                     <!-- Dropdown mock -->
                     <div
                         class="absolute top-20 left-0 w-64 bg-white dark:bg-neutral-900 border border-gray-100 dark:border-gray-800 shadow-xl rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
@@ -157,6 +159,14 @@
                                 <div class="font-semibold text-brand-black dark:text-white">Enrich</div>
                             </div>
                             <div class="text-xs text-gray-500 pl-7">Get granular insights</div>
+                        </a>
+                        <a href="#" onclick="switchView('products'); scrollToSection('prod-pay'); return false;"
+                            class="block p-3 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg group/item">
+                            <div class="flex items-center gap-3 mb-1">
+                                <i class="ph-fill ph-arrows-left-right text-orange-600"></i>
+                                <div class="font-semibold text-brand-black dark:text-white">DirectPay</div>
+                            </div>
+                            <div class="text-xs text-gray-500 pl-7">Direct bank transfers</div>
                         </a>
                     </div>
                 </div>
@@ -191,40 +201,72 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-brand-black dark:text-white focus:outline-none">
+            <button id="mobile-menu-btn"
+                class="md:hidden text-2xl text-brand-black dark:text-white focus:outline-none p-2 rounded-md hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors">
                 <i class="ph ph-list"></i>
             </button>
         </div>
 
-        <!-- Mobile Menu (Hidden by default) -->
+        <!-- Mobile Menu Overlay -->
         <div id="mobile-menu"
-            class="hidden md:hidden bg-white dark:bg-[#050505] border-t border-gray-100 dark:border-gray-800 absolute w-full left-0 top-20 shadow-lg p-6 flex flex-col gap-4 max-h-[calc(100vh-80px)] overflow-y-auto">
-            <a href="#" onclick="switchView('products'); toggleMobileMenu(); return false;"
-                class="text-gray-600 dark:text-gray-300 font-medium hover:text-brand-blue dark:hover:text-white">Products</a>
-            <a href="#" onclick="switchView('use-cases'); toggleMobileMenu(); return false;"
-                class="text-gray-600 dark:text-gray-300 font-medium hover:text-brand-blue dark:hover:text-white">Use
-                Cases</a>
-            <a href="#" onclick="switchView('developers'); toggleMobileMenu(); return false;"
-                class="text-gray-600 dark:text-gray-300 font-medium hover:text-brand-blue dark:hover:text-white">Developers</a>
-            <a href="#" onclick="switchView('pricing'); toggleMobileMenu(); return false;"
-                class="text-gray-600 dark:text-gray-300 font-medium hover:text-brand-blue dark:hover:text-white">Pricing</a>
-            <a href="#" onclick="switchView('company'); toggleMobileMenu(); return false;"
-                class="text-gray-600 dark:text-gray-300 font-medium hover:text-brand-blue dark:hover:text-white">Company</a>
-            <hr class="border-gray-100 dark:border-gray-800">
-            <!-- Mobile Theme Toggle -->
-            <button id="mobile-theme-toggle"
-                class="flex items-center justify-between text-gray-600 dark:text-gray-300 font-medium w-full text-left">
-                <span>Dark Mode</span>
-                <i class="ph-fill ph-moon text-lg dark:hidden"></i>
-                <i class="ph-fill ph-sun text-lg hidden dark:block text-amber-400"></i>
-            </button>
-            <hr class="border-gray-100 dark:border-gray-800">
-            <a href="#"
-                class="text-gray-600 dark:text-gray-300 font-medium hover:text-brand-blue dark:hover:text-white">Sign
-                in</a>
-            <a href="#"
-                class="bg-brand-black dark:bg-white text-white dark:text-brand-black px-5 py-3 rounded-full text-center font-medium hover:opacity-90">Create
-                free account</a>
+            class="hidden md:hidden fixed left-0 top-20 w-full h-[calc(100vh-80px)] bg-white dark:bg-[#050505] overflow-y-auto pb-24 border-t border-gray-100 dark:border-gray-800 z-40">
+            <div class="p-6 flex flex-col gap-6">
+                <!-- Mobile Navigation Links -->
+                <div class="space-y-4">
+                    <!-- Products Accordion-ish -->
+                    <div>
+                        <button onclick="switchView('products'); toggleMobileMenu();"
+                            class="text-xl font-bold text-brand-black dark:text-white w-full text-left flex justify-between items-center mb-3">
+                            Products
+                            <i class="ph-bold ph-caret-right text-gray-400 text-sm"></i>
+                        </button>
+                        <div class="pl-4 space-y-3 border-l-2 border-gray-100 dark:border-gray-800 ml-1">
+                            <a href="#"
+                                onclick="switchView('products'); scrollToSection('prod-connect'); toggleMobileMenu(); return false;"
+                                class="block text-gray-600 dark:text-gray-400 font-medium hover:text-brand-blue">Connect</a>
+                            <a href="#"
+                                onclick="switchView('products'); scrollToSection('prod-enrich'); toggleMobileMenu(); return false;"
+                                class="block text-gray-600 dark:text-gray-400 font-medium hover:text-brand-blue">Enrich</a>
+                            <a href="#"
+                                onclick="switchView('products'); scrollToSection('prod-pay'); toggleMobileMenu(); return false;"
+                                class="block text-gray-600 dark:text-gray-400 font-medium hover:text-brand-blue">DirectPay</a>
+                        </div>
+                    </div>
+
+                    <a href="#" onclick="switchView('use-cases'); toggleMobileMenu(); return false;"
+                        class="text-xl font-bold text-gray-500 dark:text-gray-400 hover:text-brand-black dark:hover:text-white block transition-colors">Use
+                        Cases</a>
+                    <a href="#" onclick="switchView('developers'); toggleMobileMenu(); return false;"
+                        class="text-xl font-bold text-gray-500 dark:text-gray-400 hover:text-brand-black dark:hover:text-white block transition-colors">Developers</a>
+                    <a href="#" onclick="switchView('pricing'); toggleMobileMenu(); return false;"
+                        class="text-xl font-bold text-gray-500 dark:text-gray-400 hover:text-brand-black dark:hover:text-white block transition-colors">Pricing</a>
+                    <a href="#" onclick="switchView('company'); toggleMobileMenu(); return false;"
+                        class="text-xl font-bold text-gray-500 dark:text-gray-400 hover:text-brand-black dark:hover:text-white block transition-colors">Company</a>
+                </div>
+
+                <hr class="border-gray-100 dark:border-gray-800">
+
+                <!-- Mobile Actions -->
+                <div class="space-y-4">
+                    <button id="mobile-theme-toggle"
+                        class="flex items-center justify-between w-full p-4 bg-gray-50 dark:bg-neutral-900 rounded-xl text-brand-black dark:text-white font-medium">
+                        <span>Switch Theme</span>
+                        <div class="flex items-center gap-2">
+                            <i class="ph-fill ph-moon text-lg dark:hidden"></i>
+                            <i class="ph-fill ph-sun text-lg hidden dark:block text-amber-400"></i>
+                        </div>
+                    </button>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="#"
+                            class="flex items-center justify-center h-12 rounded-full border border-gray-200 dark:border-gray-700 text-brand-black dark:text-white font-semibold">Sign
+                            in</a>
+                        <a href="#"
+                            class="flex items-center justify-center h-12 rounded-full bg-brand-black dark:bg-white text-white dark:text-brand-black font-semibold shadow-lg">Get
+                            Started</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -234,7 +276,7 @@
         <!-- HOME VIEW -->
         <div id="home-view">
             <!-- Hero Section -->
-            <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+            <section class="relative pt-28 pb-16 md:pt-48 md:pb-32 overflow-hidden">
                 <div class="absolute inset-0 bg-grid z-0 opacity-40"></div>
                 <div class="max-w-7xl mx-auto px-6 relative z-10">
                     <div class="max-w-4xl mx-auto text-center">
@@ -1659,7 +1701,13 @@
             setTimeout(() => {
                 const element = document.getElementById(id);
                 if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
+                    const offset = 100; // Header height + padding
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
                 }
             }, 100);
         }
@@ -1738,9 +1786,11 @@
             if (mobileMenu.classList.contains('hidden')) {
                 icon.classList.remove('ph-x');
                 icon.classList.add('ph-list');
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
             } else {
                 icon.classList.remove('ph-list');
                 icon.classList.add('ph-x');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
             }
         }
 
