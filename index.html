@@ -166,7 +166,8 @@
                     class="hover:text-brand-black dark:hover:text-white transition-colors">Developers</a>
                 <a href="#" onclick="switchView('pricing'); return false;"
                     class="hover:text-brand-black dark:hover:text-white transition-colors">Pricing</a>
-                <a href="#" class="hover:text-brand-black dark:hover:text-white transition-colors">Company</a>
+                <a href="#" onclick="switchView('company'); return false;"
+                    class="hover:text-brand-black dark:hover:text-white transition-colors">Company</a>
             </div>
 
             <!-- Auth Buttons -->
@@ -1377,6 +1378,132 @@
             </section>
         </div>
 
+        <!-- COMPANY VIEW (NEW) -->
+        <div id="company-view" class="view-hidden">
+            <!-- Company Hero -->
+            <section class="relative pt-32 pb-20 bg-gray-50 dark:bg-neutral-900 overflow-hidden">
+                <div class="absolute inset-0 bg-grid z-0 opacity-40"></div>
+                <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-neutral-800 border border-gray-200 dark:border-gray-700 text-xs font-bold text-brand-blue mb-8">
+                        ABOUT US
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight text-brand-black dark:text-white mb-6">
+                        Powering the next generation of <br> <span class="text-brand-blue">internet businesses</span>
+                    </h1>
+                    <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-10">
+                        MonoCRM is building the financial data infrastructure that enables digital enterprises to grow
+                        and scale.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Our Story / Stats -->
+            <section class="py-24 bg-white dark:bg-[#050505]">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
+                        <div>
+                            <h2 class="text-3xl font-bold text-brand-black dark:text-white mb-6">Our Mission</h2>
+                            <p class="text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
+                                We believe that access to financial data is the key to unlocking economic potential.
+                                Before MonoCRM, businesses had to rely on manual statements, screen scraping, or
+                                fragmented APIs to understand their customers.
+                            </p>
+                            <p class="text-lg text-gray-500 dark:text-gray-400 leading-relaxed">
+                                Today, we provide a single, reliable API that connects to banks, telcos, and mobile
+                                money wallets across the continent, empowering developers to build inclusive financial
+                                products.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div
+                                class="p-6 bg-gray-50 dark:bg-neutral-900 rounded-2xl border border-gray-100 dark:border-gray-800">
+                                <div class="text-4xl font-bold text-brand-blue mb-2">2M+</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Connected Accounts</div>
+                            </div>
+                            <div
+                                class="p-6 bg-gray-50 dark:bg-neutral-900 rounded-2xl border border-gray-100 dark:border-gray-800">
+                                <div class="text-4xl font-bold text-purple-600 mb-2">500+</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Businesses</div>
+                            </div>
+                            <div
+                                class="p-6 bg-gray-50 dark:bg-neutral-900 rounded-2xl border border-gray-100 dark:border-gray-800">
+                                <div class="text-4xl font-bold text-green-600 mb-2">99.9%</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Uptime</div>
+                            </div>
+                            <div
+                                class="p-6 bg-gray-50 dark:bg-neutral-900 rounded-2xl border border-gray-100 dark:border-gray-800">
+                                <div class="text-4xl font-bold text-orange-600 mb-2">4</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Countries</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Values -->
+            <section class="py-24 bg-gray-50 dark:bg-neutral-900">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl font-bold text-brand-black dark:text-white">Our Values</h2>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div
+                            class="bg-white dark:bg-[#0A0A0A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                            <div
+                                class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 text-brand-blue rounded-xl flex items-center justify-center mb-6 text-2xl">
+                                <i class="ph-fill ph-heart"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-black dark:text-white mb-3">Customer Obsession</h3>
+                            <p class="text-gray-500 dark:text-gray-400">We start with the customer and work backward.
+                                Their success is our success.</p>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-[#0A0A0A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                            <div
+                                class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-xl flex items-center justify-center mb-6 text-2xl">
+                                <i class="ph-fill ph-lightbulb"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-black dark:text-white mb-3">Innovation</h3>
+                            <p class="text-gray-500 dark:text-gray-400">We don't settle for the status quo. We are
+                                constantly pushing the boundaries of what's possible.</p>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-[#0A0A0A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                            <div
+                                class="w-12 h-12 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-xl flex items-center justify-center mb-6 text-2xl">
+                                <i class="ph-fill ph-shield-check"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-black dark:text-white mb-3">Trust</h3>
+                            <p class="text-gray-500 dark:text-gray-400">We handle sensitive data with the highest
+                                standards of security and integrity.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Careers CTA -->
+            <section class="py-24 bg-white dark:bg-[#050505]">
+                <div class="max-w-5xl mx-auto px-6">
+                    <div class="bg-brand-black text-white rounded-3xl p-12 text-center relative overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-64 h-64 bg-brand-blue opacity-20 blur-[80px] rounded-full transform translate-x-1/3 -translate-y-1/3">
+                        </div>
+                        <div class="relative z-10">
+                            <h2 class="text-3xl md:text-4xl font-bold mb-6">Come build with us</h2>
+                            <p class="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
+                                We are a team of dreamers, builders, and doers. Join us in our mission to connect the
+                                African digital economy.
+                            </p>
+                            <a href="#"
+                                class="inline-block bg-white text-brand-black px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors">View
+                                Open Roles</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
     </main>
 
     <!-- Footer -->
@@ -1420,7 +1547,8 @@
                 <div>
                     <h4 class="font-bold mb-6 text-sm text-brand-black dark:text-white">Company</h4>
                     <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400">
-                        <li><a href="#" class="hover:text-brand-blue transition-colors">About Us</a></li>
+                        <li><a href="#" onclick="switchView('company'); return false;"
+                                class="hover:text-brand-blue transition-colors">About Us</a></li>
                         <li><a href="#" class="hover:text-brand-blue transition-colors">Careers</a> <span
                                 class="bg-blue-100 text-brand-blue text-[10px] px-1.5 py-0.5 rounded ml-1">Hiring</span>
                         </li>
@@ -1465,6 +1593,7 @@
         const useCasesView = document.getElementById('use-cases-view');
         const developersView = document.getElementById('developers-view');
         const pricingView = document.getElementById('pricing-view');
+        const companyView = document.getElementById('company-view');
 
         // View Switching Logic
         function switchView(viewName) {
@@ -1476,6 +1605,7 @@
             useCasesView.classList.add('view-hidden');
             developersView.classList.add('view-hidden');
             pricingView.classList.add('view-hidden');
+            companyView.classList.add('view-hidden');
 
             // Show selected view
             if (viewName === 'home') {
@@ -1488,6 +1618,8 @@
                 developersView.classList.remove('view-hidden');
             } else if (viewName === 'pricing') {
                 pricingView.classList.remove('view-hidden');
+            } else if (viewName === 'company') {
+                companyView.classList.remove('view-hidden');
             }
         }
 
