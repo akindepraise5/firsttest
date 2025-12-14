@@ -191,9 +191,40 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-2xl text-brand-black">
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-brand-black dark:text-white focus:outline-none">
                 <i class="ph ph-list"></i>
             </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white dark:bg-[#050505] border-t border-gray-100 dark:border-gray-800 absolute w-full left-0 top-20 shadow-lg p-6 flex flex-col gap-4 max-h-[calc(100vh-80px)] overflow-y-auto">
+            <a href="#" onclick="switchView('products'); toggleMobileMenu(); return false;"
+                class="text-gray-600 dark:text-gray-300 font-medium hover:text-brand-blue dark:hover:text-white">Products</a>
+            <a href="#" onclick="switchView('use-cases'); toggleMobileMenu(); return false;"
+                class="text-gray-600 dark:text-gray-300 font-medium hover:text-brand-blue dark:hover:text-white">Use
+                Cases</a>
+            <a href="#" onclick="switchView('developers'); toggleMobileMenu(); return false;"
+                class="text-gray-600 dark:text-gray-300 font-medium hover:text-brand-blue dark:hover:text-white">Developers</a>
+            <a href="#" onclick="switchView('pricing'); toggleMobileMenu(); return false;"
+                class="text-gray-600 dark:text-gray-300 font-medium hover:text-brand-blue dark:hover:text-white">Pricing</a>
+            <a href="#" onclick="switchView('company'); toggleMobileMenu(); return false;"
+                class="text-gray-600 dark:text-gray-300 font-medium hover:text-brand-blue dark:hover:text-white">Company</a>
+            <hr class="border-gray-100 dark:border-gray-800">
+            <!-- Mobile Theme Toggle -->
+            <button id="mobile-theme-toggle"
+                class="flex items-center justify-between text-gray-600 dark:text-gray-300 font-medium w-full text-left">
+                <span>Dark Mode</span>
+                <i class="ph-fill ph-moon text-lg dark:hidden"></i>
+                <i class="ph-fill ph-sun text-lg hidden dark:block text-amber-400"></i>
+            </button>
+            <hr class="border-gray-100 dark:border-gray-800">
+            <a href="#"
+                class="text-gray-600 dark:text-gray-300 font-medium hover:text-brand-blue dark:hover:text-white">Sign
+                in</a>
+            <a href="#"
+                class="bg-brand-black dark:bg-white text-white dark:text-brand-black px-5 py-3 rounded-full text-center font-medium hover:opacity-90">Create
+                free account</a>
         </div>
     </nav>
 
@@ -1674,6 +1705,7 @@
 
         // Dark Mode Logic
         const themeToggleBtn = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
 
         // Check local storage or system preference
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -1682,15 +1714,37 @@
             document.documentElement.classList.remove('dark');
         }
 
-        themeToggleBtn.addEventListener('click', () => {
+        function toggleTheme() {
             document.documentElement.classList.toggle('dark');
-
             if (document.documentElement.classList.contains('dark')) {
                 localStorage.theme = 'dark';
             } else {
                 localStorage.theme = 'light';
             }
-        });
+        }
+
+        themeToggleBtn.addEventListener('click', toggleTheme);
+        if (mobileThemeToggle) {
+            mobileThemeToggle.addEventListener('click', toggleTheme);
+        }
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+            } else {
+                icon.classList.remove('ph-list');
+                icon.classList.add('ph-x');
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
     </script>
 </body>
 
