@@ -137,13 +137,21 @@
                     <!-- Dropdown mock -->
                     <div
                         class="absolute top-20 left-0 w-64 bg-white dark:bg-neutral-900 border border-gray-100 dark:border-gray-800 shadow-xl rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
-                        <a href="#" class="block p-3 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg group/item">
-                            <div class="font-semibold text-brand-black dark:text-white">Connect</div>
-                            <div class="text-xs text-gray-500 mt-1">Sync customer data instantly</div>
+                        <a href="#connect"
+                            class="block p-3 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg group/item">
+                            <div class="flex items-center gap-3 mb-1">
+                                <i class="ph-fill ph-plugs-connected text-brand-blue"></i>
+                                <div class="font-semibold text-brand-black dark:text-white">Connect</div>
+                            </div>
+                            <div class="text-xs text-gray-500 pl-7">Sync customer data instantly</div>
                         </a>
-                        <a href="#" class="block p-3 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg group/item">
-                            <div class="font-semibold text-brand-black dark:text-white">Enrich</div>
-                            <div class="text-xs text-gray-500 mt-1">Get granular insights</div>
+                        <a href="#enrich"
+                            class="block p-3 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg group/item">
+                            <div class="flex items-center gap-3 mb-1">
+                                <i class="ph-fill ph-chart-bar text-purple-600"></i>
+                                <div class="font-semibold text-brand-black dark:text-white">Enrich</div>
+                            </div>
+                            <div class="text-xs text-gray-500 pl-7">Get granular insights</div>
                         </a>
                     </div>
                 </div>
@@ -343,7 +351,7 @@
 
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Card 1 -->
-                <div
+                <div id="connect"
                     class="group border border-gray-100 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-300 rounded-2xl p-8 hover:-translate-y-1">
                     <div
                         class="w-12 h-12 bg-blue-50 dark:bg-gray-800 rounded-xl flex items-center justify-center text-brand-blue mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -360,7 +368,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div
+                <div id="enrich"
                     class="group border border-gray-100 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-300 rounded-2xl p-8 hover:-translate-y-1">
                     <div
                         class="w-12 h-12 bg-purple-50 dark:bg-gray-800 rounded-xl flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform duration-300">
