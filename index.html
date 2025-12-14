@@ -200,11 +200,18 @@
                 </a>
             </div>
 
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn"
-                class="md:hidden text-2xl text-brand-black dark:text-white focus:outline-none p-2 rounded-md hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors">
-                <i class="ph ph-list"></i>
-            </button>
+            <!-- Mobile Controls -->
+            <div class="flex items-center gap-2 md:hidden">
+                <button id="mobile-theme-toggle"
+                    class="p-2 text-brand-black dark:text-white focus:outline-none rounded-md hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors">
+                    <i class="ph-fill ph-moon text-xl dark:hidden"></i>
+                    <i class="ph-fill ph-sun text-xl hidden dark:block text-amber-400"></i>
+                </button>
+                <button id="mobile-menu-btn"
+                    class="text-2xl text-brand-black dark:text-white focus:outline-none p-2 rounded-md hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
         </div>
 
         <!-- Mobile Menu Overlay -->
@@ -248,15 +255,6 @@
 
                 <!-- Mobile Actions -->
                 <div class="space-y-4">
-                    <button id="mobile-theme-toggle"
-                        class="flex items-center justify-between w-full p-4 bg-gray-50 dark:bg-neutral-900 rounded-xl text-brand-black dark:text-white font-medium">
-                        <span>Switch Theme</span>
-                        <div class="flex items-center gap-2">
-                            <i class="ph-fill ph-moon text-lg dark:hidden"></i>
-                            <i class="ph-fill ph-sun text-lg hidden dark:block text-amber-400"></i>
-                        </div>
-                    </button>
-
                     <div class="grid grid-cols-2 gap-4">
                         <a href="#"
                             class="flex items-center justify-center h-12 rounded-full border border-gray-200 dark:border-gray-700 text-brand-black dark:text-white font-semibold">Sign
