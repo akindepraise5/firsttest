@@ -162,7 +162,8 @@
                 </div>
                 <a href="#" onclick="switchView('use-cases'); return false;"
                     class="hover:text-brand-black dark:hover:text-white transition-colors">Use Cases</a>
-                <a href="#" class="hover:text-brand-black dark:hover:text-white transition-colors">Developers</a>
+                <a href="#" onclick="switchView('developers'); return false;"
+                    class="hover:text-brand-black dark:hover:text-white transition-colors">Developers</a>
                 <a href="#" class="hover:text-brand-black dark:hover:text-white transition-colors">Pricing</a>
                 <a href="#" class="hover:text-brand-black dark:hover:text-white transition-colors">Company</a>
             </div>
@@ -666,18 +667,15 @@
                                 </div>
                                 <div class="space-y-2 font-mono text-xs text-gray-600 dark:text-gray-400">
                                     <div class="flex"><span class="w-20 text-purple-500">"id":</span>
-                                        <span>"64b9..."</span>
-                                    </div>
+                                        <span>"64b9..."</span></div>
                                     <div class="flex"><span class="w-20 text-purple-500">"name":</span> <span>"John
                                             Doe"</span></div>
                                     <div class="flex"><span class="w-20 text-purple-500">"balance":</span> <span
                                             class="text-brand-blue">450000.00</span></div>
                                     <div class="flex"><span class="w-20 text-purple-500">"currency":</span>
-                                        <span>"NGN"</span>
-                                    </div>
+                                        <span>"NGN"</span></div>
                                     <div class="flex"><span class="w-20 text-purple-500">"type":</span>
-                                        <span>"savings"</span>
-                                    </div>
+                                        <span>"savings"</span></div>
                                 </div>
                             </div>
                         </div>
@@ -777,8 +775,7 @@
                                         <div class="flex items-center gap-3">
                                             <div
                                                 class="w-8 h-8 rounded-full bg-brand-blue flex items-center justify-center text-white">
-                                                <i class="ph-bold ph-bank"></i>
-                                            </div>
+                                                <i class="ph-bold ph-bank"></i></div>
                                             <span class="font-medium text-brand-black dark:text-white">Pay with
                                                 Bank</span>
                                         </div>
@@ -788,8 +785,7 @@
                                         class="p-3 border border-gray-200 dark:border-gray-700 rounded-lg flex items-center gap-3 opacity-50">
                                         <div
                                             class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                                            <i class="ph-bold ph-credit-card"></i>
-                                        </div>
+                                            <i class="ph-bold ph-credit-card"></i></div>
                                         <span class="font-medium text-brand-black dark:text-white">Pay with Card</span>
                                     </div>
                                 </div>
@@ -909,32 +905,28 @@
                             <div class="bg-white dark:bg-black p-4 rounded-xl shadow-sm text-center">
                                 <div
                                     class="w-10 h-10 mx-auto bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-3">
-                                    <i class="ph-fill ph-coffee"></i>
-                                </div>
+                                    <i class="ph-fill ph-coffee"></i></div>
                                 <div class="text-xs text-gray-400">Food & Dining</div>
                                 <div class="font-bold dark:text-white">₦ 25,000</div>
                             </div>
                             <div class="bg-white dark:bg-black p-4 rounded-xl shadow-sm text-center">
                                 <div
                                     class="w-10 h-10 mx-auto bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-3">
-                                    <i class="ph-fill ph-car"></i>
-                                </div>
+                                    <i class="ph-fill ph-car"></i></div>
                                 <div class="text-xs text-gray-400">Transport</div>
                                 <div class="font-bold dark:text-white">₦ 12,500</div>
                             </div>
                             <div class="bg-white dark:bg-black p-4 rounded-xl shadow-sm text-center">
                                 <div
                                     class="w-10 h-10 mx-auto bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-3">
-                                    <i class="ph-fill ph-house"></i>
-                                </div>
+                                    <i class="ph-fill ph-house"></i></div>
                                 <div class="text-xs text-gray-400">Rent</div>
                                 <div class="font-bold dark:text-white">₦ 150,000</div>
                             </div>
                             <div class="bg-white dark:bg-black p-4 rounded-xl shadow-sm text-center">
                                 <div
                                     class="w-10 h-10 mx-auto bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-3">
-                                    <i class="ph-fill ph-trend-up"></i>
-                                </div>
+                                    <i class="ph-fill ph-trend-up"></i></div>
                                 <div class="text-xs text-gray-400">Investments</div>
                                 <div class="font-bold dark:text-white">₦ 50,000</div>
                             </div>
@@ -1033,6 +1025,178 @@
             </section>
         </div>
 
+        <!-- DEVELOPERS VIEW (NEW) -->
+        <div id="developers-view" class="view-hidden">
+            <!-- Developers Hero -->
+            <section class="relative pt-32 pb-20 bg-brand-black text-white overflow-hidden">
+                <div class="absolute inset-0 bg-grid opacity-10"></div>
+                <!-- Abstract glowing orb -->
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue opacity-10 blur-[100px] rounded-full pointer-events-none">
+                </div>
+
+                <div class="max-w-7xl mx-auto px-6 relative z-10">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-bold text-brand-blue mb-8">
+                                DEVELOPER FIRST
+                            </div>
+                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                                Infrastructure designed for <span class="text-brand-blue">builders.</span>
+                            </h1>
+                            <p class="text-xl text-gray-400 max-w-lg mb-10 leading-relaxed">
+                                Integrate financial data into your product with a few lines of code. Robust SDKs, clear
+                                documentation, and a sandbox environment to test freely.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="#"
+                                    class="bg-brand-blue text-white px-8 py-3 rounded-full font-bold hover:bg-brand-blueHover transition-colors text-center">Read
+                                    Documentation</a>
+                                <a href="#"
+                                    class="border border-white/20 px-8 py-3 rounded-full font-bold hover:bg-white hover:text-black transition-colors text-center">Get
+                                    API Keys</a>
+                            </div>
+                        </div>
+
+                        <!-- Terminal Graphic -->
+                        <div
+                            class="bg-[#1e1e1e] rounded-xl border border-white/10 shadow-2xl overflow-hidden font-mono text-sm relative">
+                            <div class="flex items-center gap-2 px-4 py-3 bg-[#252526] border-b border-black">
+                                <div class="flex gap-1.5">
+                                    <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                                </div>
+                                <div class="ml-2 text-gray-500 text-xs">init_mono.js</div>
+                            </div>
+                            <div class="p-6 text-gray-300 leading-relaxed">
+                                <div><span class="text-purple-400">import</span> MonoConnect <span
+                                        class="text-purple-400">from</span> <span
+                                        class="text-green-400">'@mono.co/connect.js'</span>;</div>
+                                <br>
+                                <div><span class="text-purple-400">const</span> mono = <span
+                                        class="text-blue-400">new</span> MonoConnect({</div>
+                                <div class="pl-4">key: <span class="text-green-400">'test_pk_...'</span>,</div>
+                                <div class="pl-4">onSuccess: (code) => {</div>
+                                <div class="pl-8"><span class="text-gray-500">// Exchange code for permanent ID</span>
+                                </div>
+                                <div class="pl-8"><span class="text-blue-400">console</span>.log(<span
+                                        class="text-green-400">"Account linked:"</span>, code);</div>
+                                <div class="pl-4">},</div>
+                                <div class="pl-4">onClose: () => <span class="text-blue-400">console</span>.log(<span
+                                        class="text-green-400">"Widget closed"</span>)</div>
+                                <div>});</div>
+                                <br>
+                                <div><span class="text-gray-500">// Launch the widget</span></div>
+                                <div>mono.open();</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Grid -->
+            <section class="py-24 bg-white dark:bg-[#050505]">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Feature 1 -->
+                        <div
+                            class="p-8 rounded-2xl border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-neutral-900/50 hover:border-brand-blue/50 transition-colors">
+                            <div
+                                class="w-12 h-12 bg-white dark:bg-black rounded-xl flex items-center justify-center text-brand-black dark:text-white shadow-sm mb-6 text-2xl">
+                                <i class="ph-bold ph-code"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-black dark:text-white mb-3">Modern SDKs</h3>
+                            <p class="text-gray-500 dark:text-gray-400">
+                                Official libraries for Node.js, Python, PHP, Java, React, React Native, Flutter, and
+                                Android.
+                            </p>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div
+                            class="p-8 rounded-2xl border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-neutral-900/50 hover:border-brand-blue/50 transition-colors">
+                            <div
+                                class="w-12 h-12 bg-white dark:bg-black rounded-xl flex items-center justify-center text-brand-black dark:text-white shadow-sm mb-6 text-2xl">
+                                <i class="ph-bold ph-lightning"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-black dark:text-white mb-3">Real-time Webhooks</h3>
+                            <p class="text-gray-500 dark:text-gray-400">
+                                Listen for events like new transactions, account re-authorizations, and data sync
+                                completions.
+                            </p>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div
+                            class="p-8 rounded-2xl border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-neutral-900/50 hover:border-brand-blue/50 transition-colors">
+                            <div
+                                class="w-12 h-12 bg-white dark:bg-black rounded-xl flex items-center justify-center text-brand-black dark:text-white shadow-sm mb-6 text-2xl">
+                                <i class="ph-bold ph-flask"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-black dark:text-white mb-3">Sandbox Mode</h3>
+                            <p class="text-gray-500 dark:text-gray-400">
+                                Test your integration with unlimited mock data and scenarios before going live. No real
+                                money required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Documentation Links -->
+            <section class="py-24 bg-gray-50 dark:bg-neutral-900">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="flex justify-between items-end mb-12">
+                        <div>
+                            <h2 class="text-3xl font-bold text-brand-black dark:text-white mb-4">Documentation</h2>
+                            <p class="text-gray-500 dark:text-gray-400">Everything you need to integrate MonoCRM.</p>
+                        </div>
+                        <a href="#" class="text-brand-blue font-bold hover:underline hidden md:block">View full
+                            reference -></a>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <a href="#"
+                            class="group bg-white dark:bg-[#0A0A0A] p-6 rounded-xl border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all">
+                            <div class="text-brand-blue mb-4"><i class="ph-fill ph-rocket-launch text-2xl"></i></div>
+                            <h4
+                                class="font-bold text-brand-black dark:text-white mb-2 group-hover:text-brand-blue transition-colors">
+                                Quickstart Guide</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Get your first API call working in 5
+                                minutes.</p>
+                        </a>
+                        <a href="#"
+                            class="group bg-white dark:bg-[#0A0A0A] p-6 rounded-xl border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all">
+                            <div class="text-purple-600 mb-4"><i class="ph-fill ph-users text-2xl"></i></div>
+                            <h4
+                                class="font-bold text-brand-black dark:text-white mb-2 group-hover:text-purple-600 transition-colors">
+                                Accounts API</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Retrieve account details, balances, and
+                                statements.</p>
+                        </a>
+                        <a href="#"
+                            class="group bg-white dark:bg-[#0A0A0A] p-6 rounded-xl border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all">
+                            <div class="text-green-600 mb-4"><i class="ph-fill ph-money text-2xl"></i></div>
+                            <h4
+                                class="font-bold text-brand-black dark:text-white mb-2 group-hover:text-green-600 transition-colors">
+                                Payments API</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Initiate transfers and manage recurring
+                                debits.</p>
+                        </a>
+                        <a href="#"
+                            class="group bg-white dark:bg-[#0A0A0A] p-6 rounded-xl border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all">
+                            <div class="text-orange-600 mb-4"><i class="ph-fill ph-warning-circle text-2xl"></i></div>
+                            <h4
+                                class="font-bold text-brand-black dark:text-white mb-2 group-hover:text-orange-600 transition-colors">
+                                Errors & Status</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Handling API errors and response codes.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
     </main>
 
     <!-- Footer -->
@@ -1065,7 +1229,8 @@
                 <div>
                     <h4 class="font-bold mb-6 text-sm text-brand-black dark:text-white">Resources</h4>
                     <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400">
-                        <li><a href="#" class="hover:text-brand-blue transition-colors">Developers</a></li>
+                        <li><a href="#" onclick="switchView('developers'); return false;"
+                                class="hover:text-brand-blue transition-colors">Developers</a></li>
                         <li><a href="#" class="hover:text-brand-blue transition-colors">API Reference</a></li>
                         <li><a href="#" class="hover:text-brand-blue transition-colors">Community</a></li>
                         <li><a href="#" class="hover:text-brand-blue transition-colors">Blog</a></li>
@@ -1118,6 +1283,7 @@
         const homeView = document.getElementById('home-view');
         const productsView = document.getElementById('products-view');
         const useCasesView = document.getElementById('use-cases-view');
+        const developersView = document.getElementById('developers-view');
 
         // View Switching Logic
         function switchView(viewName) {
@@ -1127,6 +1293,7 @@
             homeView.classList.add('view-hidden');
             productsView.classList.add('view-hidden');
             useCasesView.classList.add('view-hidden');
+            developersView.classList.add('view-hidden');
 
             // Show selected view
             if (viewName === 'home') {
@@ -1135,6 +1302,8 @@
                 productsView.classList.remove('view-hidden');
             } else if (viewName === 'use-cases') {
                 useCasesView.classList.remove('view-hidden');
+            } else if (viewName === 'developers') {
+                developersView.classList.remove('view-hidden');
             }
         }
 
